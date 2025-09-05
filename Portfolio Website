@@ -1,1 +1,236 @@
-// code for student portfolio website
+<!-- code for student portfolio website-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saaraha's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #4da6ff; /* light blue */
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: opacity 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #4da6ff; /* light blue */
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #4da6ff; /* light blue */
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+
+    /* Home Section */
+    .home {
+      text-align: center;
+      background: #e6f4ff; /* very light blue background */
+      padding: 100px 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .home h2 {
+      font-size: 2.5rem;
+      color: #1e75d8; /* darker blue */
+    }
+
+    .home p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* About */
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    /* Skills */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .skill {
+      padding: 10px 18px;
+      background: #e6f4ff; /* light blue bg */
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #1e75d8;
+      transition: background 0.3s ease, transform 0.3s ease;
+      cursor: default;
+    }
+
+    .skill:hover {
+      background: #4da6ff;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: #4da6ff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background: #1e75d8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #4da6ff;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Saaraha's Portfolio</h1>
+    <p>Web Developer | Designer | Programmer</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hi, I'm M.Saaraha! I build modern and user-friendly websites. Scroll down to see my work and skills.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer with experience in creating responsive , dynamic and user-friendly websites. 
+       skilled in Python, C/C++, Java, HTML, CSS, JavaScript. Eager to apply technical skills and gain hands-on experience 
+       through projects and internships. I love learning new technologies and applying them to real-world projects.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Canva</div>
+      <div class="skill">Python</div>
+      <div class="skill">Java</div>
+      <div class="skill">C/C++</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; By M.Saaraha | 2025 </p>
+    <a href="https://www.linkedin.com/in/Saaraha-M" target="_blank">LinkedIn</a>
+  </footer>
+</body>
+</html>
